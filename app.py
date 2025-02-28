@@ -19,7 +19,7 @@ class Task(db.Model):
     # PICK ONE to be the "primary_key"
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.now(timezone.utc))
+    date_created = db.Column(db.DateTime, default=datetime.now(timezone('EST')))
 
     # String representation of the object
     def __repr__(self):
